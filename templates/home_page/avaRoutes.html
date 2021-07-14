@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Routes</title>
+  </head>
+  <body>
+    <h1>Here are the available routes . . . </h1>
+    {% if Routes %}
+
+    <ol>
+      {% for route in Routes %}
+      <li>Airline Information :</li>
+        <ul>
+          <li>Airline : {{route.airline}} </li>
+          <li>Airline ID : {{route.airline_ID}} </li>
+          <li>Source Airport : {{route.source_airport}} </li>
+          <li>Source Airport ID : {{route.source_airport_id}} </li>
+          <li>Destination Airport : {{route.destination_airport}} </li>
+          <li>Destination Airport ID : {{route.destination_airport_id}} </li>
+        </ul>
+      {% endfor %}
+    </ol>
+
+    {% endif %}
+  </body>
+</html>
